@@ -1,0 +1,26 @@
+<h1 id="big-files-on-ipfs">Big Files on ipfs</h1>
+<p>This post is meant to be a test of being able to use ipfs to share files without too much thought.</p>
+<p>We'll watch an ogg that hopefully can stream from ipfs!</p>
+<h2 id="the-old-fashioned-way">The old fashioned way</h2>
+<p>First, we'll embed the http version hosted by archive.org.</p>
+<p>It looks like this:</p>
+<pre><code>&lt;video src=&quot;https://archive.org/download/DWebSummit2016_Keynote_Tim_Berners_Lee/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv&quot; type=&quot;video/ogg&quot; controls width=&quot;320&quot; height=&quot;240&quot;&gt;&lt;/video&gt;</code></pre>
+<video src="https://archive.org/download/DWebSummit2016_Keynote_Tim_Berners_Lee/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv" type="video/ogg" controls width="320" height="240">
+</video>
+<h2 id="the-decent-way">The decent way</h2>
+<p>Then, we'll download it, move it to the public directory of the blog, and use <code>ipscend</code> to upload it to ipfs.</p>
+<pre><code>cd homepage
+mkdir public/videos
+cd public/videos
+wget https://archive.org/download/DWebSummit2016_Keynote_Tim_Berners_Lee/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv
+cd ../..
+ipscend publish</code></pre>
+<p>This will take a few minutes depending on your connection.</p>
+<p>The tag is pretty much the same, except since this Web page is hosted on ipfs, it is served from a relative path.</p>
+<pre><code>&lt;video src=&quot;../videos/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv&quot; controls type=&quot;video/ogg&quot; width=&quot;320&quot; height=&quot;240&quot;&gt;&lt;/video&gt;</code></pre>
+<video src="../videos/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv" controls type="video/ogg" width="320" height="240">
+</video>
+<h2 id="going-further">Going further</h2>
+<p>Any Web technology should be usable in some way in the decentralized Web. For example, chat services that create ad-hoc relationships between browsers like Web RTC might be used to create bridges between the decent- and centralized Webs.</p>
+<hr />
+<p><a href="/index.html">Go home</a></p>
