@@ -65,4 +65,4 @@ centralized Webs.
 
 __________________
 
-[Go home](/index.html)
+[Go home](../)
