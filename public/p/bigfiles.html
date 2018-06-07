@@ -7,6 +7,7 @@
 <pre><code>&lt;video src=&quot;https://archive.org/download/DWebSummit2016_Keynote_Tim_Berners_Lee/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv&quot; type=&quot;video/ogg&quot; controls width=&quot;320&quot; height=&quot;240&quot;&gt;&lt;/video&gt;</code></pre>
 <video src="https://archive.org/download/DWebSummit2016_Keynote_Tim_Berners_Lee/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv" type="video/ogg" controls width="320" height="240">
 </video>
+<p>Note we're not actually streaming this file, but simply downloading it faster than we are viewing it.</p>
 <h2 id="the-decent-way">The decent way</h2>
 <p>Then, we'll download it, move it to the public directory of the blog, and use <code>ipscend</code> to upload it to ipfs.</p>
 <pre><code>cd homepage
@@ -20,6 +21,10 @@ ipscend publish</code></pre>
 <pre><code>&lt;video src=&quot;../videos/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv&quot; controls type=&quot;video/ogg&quot; width=&quot;320&quot; height=&quot;240&quot;&gt;&lt;/video&gt;</code></pre>
 <video src="../videos/DWebSummit2016_Keynote_Tim_Berners_Lee.ogv" controls type="video/ogg" width="320" height="240">
 </video>
+<p>It should load alright, but I observed some odd behavior trying to scroll around as it loaded.</p>
+<h3 id="speed-notes">Speed notes</h3>
+<p>We're using the decentralized web here, so if you have a copy of this file locally, the data doesn't need to transit through a central service to reach you. There is no time waiting to upload, but if you're ipfs daemon goes offline before it has been replicated across the network, it might not be complete!</p>
+<p>Sometimes it takes a little while to resolve and buffer the video into the frame, but I was able to watch smoothly over the decent web.</p>
 <h2 id="going-further">Going further</h2>
 <p>Any Web technology should be usable in some way in the decentralized Web. For example, chat services that create ad-hoc relationships between browsers like Web RTC might be used to create bridges between the decent- and centralized Webs.</p>
 <hr />
