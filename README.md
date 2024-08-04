@@ -3,7 +3,7 @@
 This is the source repository for a decent homepage, hosted on ipfs.
 
 It uses ipscend to publish and pandoc to convert markdown 
-to hmtl.
+to html.
 
 Experimentally using [git-remote-ipfs](https://github.com/cryptix/git-remote-ipfs/) for a copy of this repository, 
 currently having trouble cloning.
